@@ -91,12 +91,14 @@ main {
     background-color: #FAF8F5;
     box-sizing: border-box;
     padding: 20px 10%;
-    width: 85%;
+    width: 95%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
 
 /* Reset default margin and padding for body and the main container */
 body, .midterbillede-sektion {
@@ -112,7 +114,7 @@ body, .midterbillede-sektion {
 .billede-figure {
     display: flex;
     justify-content: space-between;
-    width: 80%; /* Ensure it takes the full width of its container */
+    width: 95%; /* Ensure it takes the full width of its container */
     margin-left: auto;
     margin-right: auto;
 }
@@ -123,22 +125,14 @@ body, .midterbillede-sektion {
     box-sizing: border-box;
 }
 
-/* Media query for desktop screens */
-@media (min-width: 1024px) {
-    .erdumed {
-        grid-template-columns: repeat(4, 1fr); /* Four columns for the grid on desktop */
-        grid-template-areas:
-            "erd1 erd2 erd3 erd4"
-            "erd5 erd5 erd5 erd5"; /* Grid areas for desktop */
-    }
-}
+
   
 .erdumed {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns for the grid by default (mobile) */
     gap: 20px;
     margin: 0 auto;
-    width: 85%;
+    width: 95%;
     grid-template-areas:
         "erd1 erd2"
         "erd3 erd4"
@@ -182,15 +176,6 @@ body, .midterbillede-sektion {
     width:60%;
 }
 
-/* Media query for desktop screens */
-@media (min-width: 1024px) {
-    .erdumed {
-        grid-template-columns: repeat(4, 1fr); /* Four columns for the grid on desktop */
-        grid-template-areas:
-            "erd1 erd2 erd3 erd4"
-            "erd5 erd5 erd5 erd5"; /* Grid areas for desktop */
-    }
-}
 
 
 .erdumed img {
@@ -212,13 +197,14 @@ body, .midterbillede-sektion {
 }
 
 
+
 /* Find en stand nær dig Section Styles */
 .findstand-figure {
     text-align: center;
     background-color: #FAF8F5;
     box-sizing: border-box;
     padding: 20px 10%;
-    width: 85%;
+    width: 95%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -232,7 +218,7 @@ body, .midterbillede-sektion {
     background-color: #FAF8F5;
     box-sizing: border-box;
     padding: 20px 10%;
-    width: 85%;
+    width: 95%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -293,12 +279,13 @@ body, .midterbillede-sektion {
     background-color: #FAF8F5;
     box-sizing: border-box;
     padding: 20px 10%;
-    width: 85%;
+    width: 95%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 
 footer {
     padding: 40px;
@@ -353,6 +340,33 @@ img {
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    .erdumed {
+        width:85%;
+        grid-template-columns: repeat(4, 1fr); /* Four columns for the grid on desktop */
+        grid-template-areas:
+            "erd1 erd2 erd3 erd4"
+            "erd5 erd5 erd5 erd5"; /* Grid areas for desktop */
+    }
+    .hvaderdet-figure {
+        width:85%;
+    }
+    .billede-figure {
+        width:85%;
+    }
+    .findstand-figure {
+        width:85%;
+    }
+    .faq {
+        width: 85%;
+    }
+    .kontakt-section {
+        width: 85%;
+    }   
 }
 
 @media (max-width: 768px) {
