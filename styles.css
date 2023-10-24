@@ -1,0 +1,362 @@
+@font-face {
+    font-family: SundayBest;
+    src: url(assets/font/SundayBest.ttf);
+  }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logoimg {
+    height:55px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#00985F;
+    background-color: #F5F1E8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F5F1E8;
+    color: #00985F;
+}
+
+.banner {
+    background-image: url(assets/images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+    display: flex; /* For centering .banneroverlay */
+    justify-content: center;
+    align-items: center;
+}
+
+.banneroverlay {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F5F1E8;
+    padding: 3vh 4vw;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 600px;
+    max-height: 500px;
+}
+
+.banneroverskrift {
+    color: #00985F;
+    font-size: 1.5rem; /* Adjusted font size */
+}
+
+.bannertekst {
+    color: #00985F;
+    padding: 1rem;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .banneroverlay {
+        width: 95%; /* Increased width for smaller screens */
+    }
+    .banner {
+        background-image: url(assets/images/mobilebanner.jpg);   
+    }
+}
+
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+.midtersektion {
+    padding-bottom:10px;
+}
+
+.hvaderdet-figure {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Reset default margin and padding for body and the main container */
+body, .midterbillede-sektion {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure it takes the full width */
+}
+
+.medoverskrift {
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+.billede-figure {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Ensure it takes the full width of its container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.billede-figure img {
+    width: calc(100% / 3);
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    .erdumed {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for the grid on desktop */
+        grid-template-areas:
+            "erd1 erd2 erd3 erd4"
+            "erd5 erd5 erd5 erd5"; /* Grid areas for desktop */
+    }
+}
+  
+.erdumed {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the grid by default (mobile) */
+    gap: 20px;
+    margin: 0 auto;
+    width: 85%;
+    grid-template-areas:
+        "erd1 erd2"
+        "erd3 erd4"
+        "erd5 erd5"; /* Default grid areas (mobile) */
+}
+
+.erdumed1 {
+    grid-area: erd1;
+}
+
+.erdumed2 {
+    grid-area: erd2;
+}
+
+.erdumed3 {
+    grid-area: erd3;
+}
+
+.erdumed4 {
+    grid-area: erd4;
+}
+
+.erdumed5 {
+    grid-area: erd5;
+}
+
+/* Common styles for .erdumed1, .erdumed2, .erdumed3, .erdumed4, and .erdumed5 */
+.erdumed1, .erdumed2, .erdumed3, .erdumed4, .erdumed5 {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ikonererdumed {
+    width:60%;
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    .erdumed {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for the grid on desktop */
+        grid-template-areas:
+            "erd1 erd2 erd3 erd4"
+            "erd5 erd5 erd5 erd5"; /* Grid areas for desktop */
+    }
+}
+
+
+.erdumed img {
+    height: auto;
+    max-width: 200px; /* Max width of the image */
+    margin: 0 auto; /* Center the image if the container is bigger */
+}
+
+
+.erdumed-sektion .infobillede {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+/* Find en stand nær dig Section Styles */
+.findstand-figure {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.faq {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom:20px;
+}
+
+.faqul {
+    list-style-type: none; /* Remove bullets */
+    text-align:left;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faqul li {
+    position: relative; /* Set to relative so pseudo-element is positioned relative to this */
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 30px;
+    margin-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 40px; /* Space for the + icon */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer; /* Indicates an interactive element */
+}
+
+.faqul li::after {
+    content: "+";
+    position: absolute;
+    right: 10px; /* Distance from the right of the li */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+    .faqul li {
+        height: 70px; /* Increased height for smaller screens */
+        font-size: 0.8em; /* Increase font size for better readability on smaller screens */
+        margin-right:auto;
+        margin-left: auto;
+
+    }
+    .faqul {
+        list-style-type: none; /* Remove bullets */
+        text-align:left;
+        width:100%;
+        padding:0;
+    }
+}
+
+/* KONTAKT Section Styles */
+.kontakt-section {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background-color:#B3724A;
+    color:#FFFFFF;
+}
+
+.politikker {
+    color:#FFFFFF;
+}
+
+.cta1, .cta2, .cta3, .cta4 {
+    background-color: #B3724A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.cta3 {
+    margin-top: 30px;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(white, white);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #00985F;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .erdumed5 {
+        width: 100%;
+    }
+}
