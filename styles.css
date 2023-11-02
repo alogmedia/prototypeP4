@@ -3,6 +3,10 @@
     src: url(assets/font/SundayBest.ttf);
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
