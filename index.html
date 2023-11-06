@@ -10,16 +10,27 @@
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<header>
-    <figure class="logo" style="max-width: 100%;">
-    <img class="logoimg" src="assets/images/logo.png"/>
-    </figure>
-
-    <!-- Burger menu laves til i javascript af Freya -->
-    <nav class="burger-menu">
-    <label class="menu-ikon" for="menu-toggle"> ☰</label>
-    </nav>
-</header>
+    <header>
+        <figure class="logo">
+            <img class="logoimg" src="assets/images/logo.png" alt="Logo">
+        </figure>
+        <ul class="desktop-menu">
+                <li><a href="#">OM OS</a></li>
+                <li><a href="#">LEJ STAND</a></li>
+                <li><a href="#">LOKATIONER</a></li>
+                <li><a href="#">KONTAKT OS</a></li>
+        </ul>
+        <nav class="footer-menu">
+            <aside class="right-menu">
+                <a href="#" id="settings">☰</a>
+            </aside>
+        </nav>
+        <section id="settings-dropdown" class="dropdown">
+            <ul id="minliste"> </ul>
+    
+        </section>
+    </header>
+    
 
 <section class="banner"> <!-- Banner med overskrift, brødtekst og CTA knap -->
     <figure class="banneroverlay">
@@ -165,6 +176,8 @@
     <p><a class="politikker" href="#">Privatlivspolitik</a> // <a class="politikker" href="#">Cookiepolitik</a></p>
 </footer>
 <script src="assets/js/scrolltop.js"></script>
+<script src="assets/js/freya.js"></script>
+
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 </body>
 </html>
