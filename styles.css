@@ -42,6 +42,20 @@ header {
     align-items: center;
 }
 
+.bannerlokationer {
+    background-image: url(assets/images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    width: 100%;
+    height: 15vh;
+    display: flex; /* For centering .banneroverlay */
+    justify-content: center;
+    align-items: center;
+}
+
+
 .banneroverlay {
     position: relative;
     margin-left: auto;
@@ -315,6 +329,144 @@ footer {
 .cta3 {
     margin-top: 30px;
 }
+
+/* Find en stand nær dig Section Styles */
+.lokation-figure {
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lokationoverskrift {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.lokationoverskrift,
+.afholdes {
+    display: block; /* Ensures that the elements take up the full width available and stack vertically */
+    text-align: center; /* Optional: if you want the text to be centered */
+    margin: 10px 0; /* Adjust the margin as needed for spacing */
+}
+
+/* If .lokation-figure is a flex container, ensure it stacks children vertically */
+.lokation-figure-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the flex items if needed */
+    justify-content: center; /* Center the content vertically if needed */
+    /* Other styling as needed */
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.lokation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lokation-figure {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.lokation-image-left .lokationbillede,
+.lokation-image-right .lokationbillede {
+    width: 50%; /* Adjust image size */
+}
+
+.lokation-content-left {
+    flex: 1;
+    padding: 10px; /* Add padding around the text */
+    text-align:left;
+}
+
+.lokation-content-right {
+    flex: 1;
+    padding: 10px; /* Add padding around the text */
+    text-align:right;
+}
+
+.lokationtekst-left {
+    color:#333333;
+    margin-left:auto;
+}
+
+.lokationtekst-right {
+    color:#333333;
+    margin-right:auto;
+}
+
+.lokationheadline {
+    margin-top: 0px;
+}
+
+/* This will make the text come first when image is on the right */
+.lokation-image-right {
+    flex-direction: row-reverse;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1000) {
+    .lokation-figure {
+        flex-direction: column;
+    }
+
+    .lokation-image-right .lokation-content,
+    .lokation-image-left .lokation-content {
+        order: -1; /* Make text appear above the image on smaller screens */
+    }
+
+    .lokationbillede {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .lokationoverskrift {
+        text-align: center; /* Center the text on smaller screens */
+    }
+    .lokation-image-left .lokationbillede, .lokation-image-right .lokationbillede {
+        width:100%;
+    }
+    .lokationtekst-left {
+        color:#333333;
+        margin-left:auto;
+        width:100%;
+        text-align: left;;
+    }
+    
+    .lokationtekst-right {
+        color:#333333;
+        margin-right:auto;
+        width:100%;
+        text-align: left;
+    }
+    .lokationheadline {
+        text-align:left;
+    }
+}
+
+
 
 #scrollTopBtn {
     display: none;
