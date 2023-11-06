@@ -24,14 +24,133 @@ body {
     background-color: #F5F1E8;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 header {
+    width: 99%;
+    padding-left: 0;
+    bottom: 0;
+    background-color: #F5F1E8;
+    font-size: 14px;
+    color:#00985F;
+}
+
+.desktop-menu {
+    text-decoration: none;
+    list-style-type: none;
+    position: fixed;
+    top:5%;
+    right: 5%;
+}
+
+.desktop-menu li {
+    text-decoration: none;
+    list-style-type: none;
+    display:inline;
+    position: relative; /* Tilføj denne linje */
+}
+
+.desktop-menu li:hover::after {
+    content: ""; /* Tilføj denne linje */
+    display: block; /* Tilføj denne linje */
+    height: 1px; /* Tilføj denne linje */
+    background-color: #B3724A; /* Tilføj denne linje */
+    position: absolute; /* Tilføj denne linje */
+    bottom: 0px; /* Tilføj denne linje */
+    left: 0; /* Tilføj denne linje */
+    right: 0; /* Tilføj denne linje */
+}
+
+
+.desktop-menu a {
+    text-decoration: none;
+    color: #B3724A;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left:20px;
+}
+
+
+#settings {
+    position:absolute;
+    top:5%;
+    right:5%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #B3724A;
+}
+
+.footer-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #F5F1E8;
-    color: #00985F;
 }
+
+.left-menu a, 
+.right-menu {
+    text-decoration: none;
+    color:#00985F;
+    padding: 0 20px 0 0;
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Stil for dropdown menu */
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 5px;
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #B3724A;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #F5F1E8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 5%;
+    width: 30%;
+    height: 40%;
+    right: 0;
+    padding-left:10px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .banner {
     background-image: url(assets/images/banner.jpg);
@@ -522,11 +641,17 @@ img {
     }
     .kontakt-section {
         width: 85%;
-    }   
+    }
+    .right-menu {
+        display:none;
+    }
 }
 
 @media (max-width: 768px) {
     .erdumed5 {
         width: 100%;
+    }
+    .desktop-menu {
+        display:none;
     }
 }
