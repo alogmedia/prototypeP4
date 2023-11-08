@@ -376,8 +376,8 @@ body, .midterbillede-sektion {
     transition: border-top 0.25s ease-out;  
     transition: transform 0.25s ease-out,
     background-color 0.25s ease-out;
-
  }
+ 
  #kort li:hover{
    color: coral;
    background-color: rgb(255, 255, 255) ;
@@ -391,6 +391,7 @@ body, .midterbillede-sektion {
  h3{
     font-size: 1rem;
     color: #000000;
+    line-height: 1rem;
  }
 
  .adressetxt{
@@ -403,15 +404,15 @@ body, .midterbillede-sektion {
     color: #000000;
  }
 
-.pinboks{
-    position:absolute;
-    width: 20vw;
-    background-color: #F5F1E8;
-    border-style: solid;
-    border-color: #333333;
-    border-radius: 0.3rem;
-    bottom: 1rem;
+#overlayx {
+    position: absolute;
+    background-color: #F5F1E8; 
+    padding: 10px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
    
 .faq-container{
