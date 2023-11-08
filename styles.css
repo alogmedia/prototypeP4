@@ -541,13 +541,13 @@ footer {
 
 
 .modelindhold {
-    background-color: #fff;
+    background-color: #FAF8F5;
     padding: 40px;
     max-width: 90%; /* Responsive max width */
     width: auto; /* Adjust width to be auto, let max-width control the size */
     text-align: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    border:none;
     position: fixed; /* Fixed position */
     top: 50%;
     left: 50%;
@@ -556,11 +556,14 @@ footer {
 }
 
 .modelindhold select {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
+    border-color: #B3724A;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .model-cta-knap {
@@ -595,13 +598,13 @@ footer {
 }
 
 .modelindhold {
-    background-color: #fff;
+    background-color: #FAF8F5;
     padding: 40px;
     max-width: 90%; /* Responsive max width */
     width: auto; /* Adjust width to be auto, let max-width control the size */
     text-align: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    border:none;
     position: fixed; /* Fixed position */
     left: 50%;
     transform: translate(-50%, -50%);
