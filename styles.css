@@ -25,16 +25,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 header {
     width: 99%;
     padding-left: 0;
@@ -47,7 +37,7 @@ header {
 .desktop-menu {
     text-decoration: none;
     list-style-type: none;
-    position: fixed;
+    position: absolute;
     top:5%;
     right: 5%;
 }
@@ -138,17 +128,6 @@ header {
     padding-left:10px;
     padding-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -548,6 +527,9 @@ footer {
 .lokation-image-right {
     flex-direction: row-reverse;
 }
+
+
+
 
 
 /* Responsive adjustments */
