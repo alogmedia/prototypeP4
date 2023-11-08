@@ -409,7 +409,7 @@ footer {
     color:#FFFFFF;
 }
 
-.cta1, .cta2, .cta3, .cta4 {
+.cta1 {
     background-color: #B3724A;
     color: #fff;
     padding: 10px 20px;
@@ -425,6 +425,20 @@ footer {
 
 .cta3 {
     margin-top: 30px;
+}
+
+.cta-knap {
+    background-color: #B3724A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-shadow: 1px 1px 3px #000000;
 }
 
 /* Find en stand nær dig Section Styles */
@@ -524,6 +538,76 @@ footer {
 }
 
 
+
+
+.modelindhold {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 90%; /* Responsive max width */
+    width: auto; /* Adjust width to be auto, let max-width control the size */
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: fixed; /* Fixed position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Above overlay background */
+}
+
+.modelindhold select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.model-cta-knap {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Styles for the input fields in the "Personlige oplysninger" modal */
+.info-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.modeloverlay {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Make sure this is less than the z-index of .modelindhold */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Overlay background */
+}
+
+
+.modeloverlay dialog.modelindhold {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modeloverlay dialog.modelindhold {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;  /* Higher z-index than the modal-overlay */
+    display: block;  /* Ensure it's displayed */
+}
 
 
 

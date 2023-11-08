@@ -66,7 +66,7 @@
         For kun 150 kr kan du leje en stand, og disse penge går direkte til Den Danske Naturfond. Dit bidrag er med til at beskytte 12 kvm dansk jord. Overskuddet du tjener i din stand går til dig selv.
         Kom og find dit nærmeste loppemarked, og vær med til at give dine brugte ting nyt liv!
     </p>
-    <button class="cta2">
+    <button class="cta-knap" data-action="OpenByModel">
         Lej Stand
     </button>
     </figure>
@@ -116,7 +116,7 @@
         <p>Ved at deltage i Loppemarkedernes</p> 
         <p>dag, støtter du et godt formål og</p>
         <p>samtidigt tjener penge til dig selv.</p>
-        <button class="cta3">
+        <button class="cta-knap" data-action="OpenByModel">
             Lej Stand
            </button>
     </figure>
@@ -128,7 +128,7 @@
         <h2>
             Find en stand nær dig
         </h2>
-        <button class="cta4">
+        <button class="cta-knap" data-action="OpenByModel">
             Lej stand
         </button>
    </figure>
@@ -200,7 +200,37 @@
 </main>
 
 
-
+<!-- Modal Overlay -->
+<dialog class="modeloverlay" id="byModel">
+    <dialog class="modelindhold">
+    <h3 class="overlayoverskrift">Vælg by</h3>
+    <select class="info-form">
+        <option value="kobenhavn">København</option> <!-- Laves om til javascript af simon -->
+        <option value="aarhus">Århus</option>
+        <option value="odense">Odense</option>
+        <option value="aalborg">Aalborg</option>
+        <option value="svendborg">Svendborg</option>
+    </select>
+    <p>sådan er du med</p>
+    <button class="cta-knap model-cta-knap" data-action="skift-til-infoModel">Videre</button>
+    </dialog>
+    </dialog>
+    <!-- Second Modal Overlay for "Personlige oplysninger" -->
+    <dialog class="modeloverlay" id="infoModel">
+    <dialog class="modelindhold">
+    <h3 class="overlayoverskrift">Personlige oplysninger</h3>
+    <form class="info-form">
+    <input placeholder="Navn" required="" type="text"/>
+    <input placeholder="Efternavn" required="" type="text"/>
+    <input placeholder="Email" required="" type="email"/>
+    <input placeholder="Mobil" required="" type="tel"/>
+    <input placeholder="Addresse" required="" type="text"/>
+    <input placeholder="By" required="" type="text"/>
+    <input placeholder="Postnummer" required="" type="text"/>
+    </form>
+    <button class="cta-knap model-cta-knap">Submit</button>
+    </dialog>
+    </dialog>
 
 <!-- Footer -->
 <footer>
@@ -210,6 +240,7 @@
 <script src="assets/js/scrolltop.js"></script>
 <script src="assets/js/freya.js"></script>
 <script src="assets/js/sofie.js"></script>
+<script src="assets/js/overlay.js"></script>
 
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 </body>
