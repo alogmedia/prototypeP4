@@ -2,8 +2,6 @@ console.log("freya.js is running…");
 
 // Variabler og typer
 let settingsDropdown = document.getElementById("settings-dropdown");
-let darkModeStatus = document.getElementById("dark-mode-status");
-let darkModeEnabled = false;
 
 // Vis eller skjul indstillingsmenuen ved klik
 let settingsLink = document.getElementById("settings");
