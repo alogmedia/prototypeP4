@@ -329,47 +329,58 @@ body, .midterbillede-sektion {
     margin-bottom: 20px;
 }
 
-.faq {
+.faq-heading{
+    padding: 20px 60px;
     text-align: center;
-    background-color: #FAF8F5;
-    box-sizing: border-box;
-    padding: 20px 10%;
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    color: #00985F;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    transition: 0.4s;
+    margin: auto;
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom:20px;
+    margin-bottom: 5px; /* Add spacing between FAQ entries */
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 60%; 
+   padding: auto;
+   font-size: 15px;  
+   margin-bottom: 5px; /* Add spacing between FAQ entries */
 }
 
-.faqul {
-    list-style-type: none; /* Remove bullets */
-    text-align:left;
-    width:70%;
-    margin-left: auto;
-    margin-right: auto;
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
 }
 
-.faqul li {
-    position: relative; /* Set to relative so pseudo-element is positioned relative to this */
-    display: flex;
-    align-items: center;
-    background-color: #FFFFFF;
-    height: 30px;
-    margin-bottom: 3px;
-    padding-left: 5px;
-    padding-right: 40px; /* Space for the + icon */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer; /* Indicates an interactive element */
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
 }
 
-.faqul li::after {
-    content: "+";
-    position: absolute;
-    right: 10px; /* Distance from the right of the li */
-    top: 50%; /* Center it vertically */
-    transform: translateY(-50%); /* Fine-tune vertical centering */
-    font-size: 1.5em; /* Adjust the size as needed */
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
 }
 
 /* Media query for smaller screens */
