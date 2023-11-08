@@ -519,46 +519,13 @@ footer {
     text-shadow: 1px 1px 3px #000000;
 }
 
-/* Find en stand nær dig Section Styles */
-.lokation-figure {
-    text-align: center;
-    background-color: #FAF8F5;
-    box-sizing: border-box;
-    padding: 20px 10%;
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.lokationoverskrift {
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.lokationoverskrift,
-.afholdes {
-    display: block; /* Ensures that the elements take up the full width available and stack vertically */
-    text-align: center; /* Optional: if you want the text to be centered */
-    margin: 10px 0; /* Adjust the margin as needed for spacing */
-}
-
 /* If .lokation-figure is a flex container, ensure it stacks children vertically */
 .lokation-figure-top {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align the flex items if needed */
-    justify-content: center; /* Center the content vertically if needed */
-    /* Other styling as needed */
-    text-align: center;
     background-color: #FAF8F5;
-    box-sizing: border-box;
     padding: 20px 10%;
     width: 95%;
-    height: 100%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -566,57 +533,24 @@ footer {
     margin-bottom: 20px;
 }
 
-
+/* If .lokation-figure is a flex container, ensure it stacks children vertically */
 .lokation {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.lokation-figure {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: #FAF8F5;
+    padding: 20px 10%;
     width: 100%;
-}
-
-.lokation-image-left .lokationbillede,
-.lokation-image-right .lokationbillede {
-    width: 50%; /* Adjust image size */
-}
-
-.lokation-content-left {
-    flex: 1;
-    padding: 10px; /* Add padding around the text */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align:left;
 }
 
-.lokation-content-right {
-    flex: 1;
-    padding: 10px; /* Add padding around the text */
-    text-align:right;
+.lokationbillede {
+    width:100%;
 }
-
-.lokationtekst-left {
-    color:#333333;
-    margin-left:auto;
-}
-
-.lokationtekst-right {
-    color:#333333;
-    margin-right:auto;
-}
-
-.lokationheadline {
-    margin-top: 0px;
-}
-
-/* This will make the text come first when image is on the right */
-.lokation-image-right {
-    flex-direction: row-reverse;
-}
-
-
-
 
 .modelindhold {
     background-color: #FAF8F5;
@@ -703,47 +637,6 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 1001;  /* Higher z-index than the modal-overlay */
     display: block;  /* Ensure it's displayed */
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 1000) {
-    .lokation-figure {
-        flex-direction: column;
-    }
-
-    .lokation-image-right .lokation-content,
-    .lokation-image-left .lokation-content {
-        order: -1; /* Make text appear above the image on smaller screens */
-    }
-
-    .lokationbillede {
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    .lokationoverskrift {
-        text-align: center; /* Center the text on smaller screens */
-    }
-    .lokation-image-left .lokationbillede, .lokation-image-right .lokationbillede {
-        width:100%;
-    }
-    .lokationtekst-left {
-        color:#333333;
-        margin-left:auto;
-        width:100%;
-        text-align: left;;
-    }
-    
-    .lokationtekst-right {
-        color:#333333;
-        margin-right:auto;
-        width:100%;
-        text-align: left;
-    }
-    .lokationheadline {
-        text-align:left;
-    }
 }
 
 
