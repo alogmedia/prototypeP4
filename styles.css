@@ -24,14 +24,112 @@ body {
     background-color: #F5F1E8;
 }
 
+
 header {
+    width: 99%;
+    padding-left: 0;
+    bottom: 0;
+    background-color: #F5F1E8;
+    font-size: 14px;
+    color:#00985F;
+}
+
+.desktop-menu {
+    text-decoration: none;
+    list-style-type: none;
+    position: absolute;
+    top:5%;
+    right: 5%;
+}
+
+.desktop-menu li {
+    text-decoration: none;
+    list-style-type: none;
+    display:inline;
+    position: relative; /* Tilføj denne linje */
+}
+
+.desktop-menu li:hover::after {
+    content: ""; /* Tilføj denne linje */
+    display: block; /* Tilføj denne linje */
+    height: 1px; /* Tilføj denne linje */
+    background-color: #B3724A; /* Tilføj denne linje */
+    position: absolute; /* Tilføj denne linje */
+    bottom: 0px; /* Tilføj denne linje */
+    left: 0; /* Tilføj denne linje */
+    right: 0; /* Tilføj denne linje */
+}
+
+
+.desktop-menu a {
+    text-decoration: none;
+    color: #B3724A;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left:20px;
+}
+
+
+#settings {
+    position:absolute;
+    top:4%;
+    right:5%;
+    text-decoration: none;
+    font-size: 25px;
+    color: #B3724A;
+}
+
+.footer-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #F5F1E8;
-    color: #00985F;
 }
+
+.left-menu a, 
+.right-menu {
+    text-decoration: none;
+    color:#00985F;
+    padding: 0 20px 0 0;
+}
+
+.left-menu a:hover,
+.right-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Stil for dropdown menu */
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 5px;
+    cursor: pointer;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #B3724A;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #F5F1E8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 5%;
+    width: 30%;
+    height: 40%;
+    right: 0;
+    padding-left:10px;
+    padding-top: 10px;
+}
+
+
 
 .banner {
     background-image: url(assets/images/banner.jpg);
@@ -233,146 +331,55 @@ body, .midterbillede-sektion {
 
 
 
-#kort{
-    width: 100%;
-    height: 0;
-    padding-bottom: 65%;
-    display: block;
-    position: relative;
-    background-image: url("assets/images/DKkort.png");
-    background-position:center;
-    background-size:cover; 
-    background-repeat: no-repeat;
- }
- 
- /* ===== nåle på kortet ===== */
- #kort li {
-    display: block;
-    position: absolute;
-    width: 1.2rem;
-    height: 1.2rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1rem;
-    font-size: 1rem;
     text-align: center;
+}
+
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+/* Spørgsmål */
+.faq-page {
+    color: #00985F;
     cursor: pointer;
-    transform: translateX(-1rem) translateY(-2.2rem); 
-    transition: transform 0.25s ease-out,
-    background-color 0.25s ease-out;
-    color: rgb(211, 211, 211);
-    border-style: solid;
-    border-width: 4px;
-    z-index: 1;
- }
- #kort li:after{ /* nåle spids */
-    content:'';
-    display: block;
-    width: 0; height: 0;
-    margin-top: 0.8rem;
-    margin-left: -0.04rem;
-    border-left: 0.4rem solid transparent;
-    border-right: 0.4rem solid transparent;
-    border-top: 0.65rem solid rgb(211, 211, 211);
-    transition: border-top 0.25s ease-out;  
-    transition: transform 0.25s ease-out,
-    background-color 0.25s ease-out;
-
- }
- #kort li:hover{
-   color: coral;
-   background-color: rgb(255, 255, 255) ;
-   transform: translateX(-1rem)translateY(-2.5rem); 
- }
- #kort li:hover:after{
-    border-top:0.65rem solid coral;
-    
- }
-
- h3{
-    font-size: 1rem;
-    color: #000000;
- }
-
- .adressetxt{
-    font-size: 0.6rem;
-    color: #000000;
- }
-
- .tidtxt{
-    font-size: 0.6rem;
-    color: #000000;
- }
-
-.pinboks{
-    position:absolute;
-    width: 20vw;
-    background-color: #F5F1E8;
-    border-style: solid;
-    border-color: #333333;
-    border-radius: 0.3rem;
-    bottom: 1rem;
-}
-
-   
-.faq {
-    text-align: center;
-    background-color: #FAF8F5;
-    box-sizing: border-box;
-    padding: 20px 10%;
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 30px 20px;
+    width: 60%;
+    transition: 0.4s;
+    margin: auto;
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom:20px;
+    margin-bottom: 5px; 
 }
 
-.faqul {
-    list-style-type: none; /* Remove bullets */
-    text-align:left;
-    width:70%;
-    margin-left: auto;
-    margin-right: auto;
+/* Svar */
+.faq-body {
+   margin: auto;
+   width: 60%; 
+   font-size: 15px;  
+   margin-bottom: 5px; 
+   padding: 0 18px;
+   background-color: #FFFFFF;
+   display: none;
+   overflow: hidden;
 }
 
-.faqul li {
-    position: relative; /* Set to relative so pseudo-element is positioned relative to this */
-    display: flex;
-    align-items: center;
-    background-color: #FFFFFF;
-    height: 30px;
-    margin-bottom: 3px;
-    padding-left: 5px;
-    padding-right: 40px; /* Space for the + icon */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer; /* Indicates an interactive element */
+.faq-page:after {
+    content: '\02795';
+    /* For "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
 }
 
-.faqul li::after {
-    content: "+";
-    position: absolute;
-    right: 10px; /* Distance from the right of the li */
-    top: 50%; /* Center it vertically */
-    transform: translateY(-50%); /* Fine-tune vertical centering */
-    font-size: 1.5em; /* Adjust the size as needed */
+.active:after {
+    content: "\2796";
+    /* For "minus" sign (-) */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1000px) {
-    .faqul li {
-        height: 70px; /* Increased height for smaller screens */
-        font-size: 0.8em; /* Increase font size for better readability on smaller screens */
-        margin-right:auto;
-        margin-left: auto;
 
-    }
-    .faqul {
-        list-style-type: none; /* Remove bullets */
-        text-align:left;
-        width:100%;
-        padding:0;
-    }
-}
 
 /* KONTAKT Section Styles */
 .kontakt-section {
@@ -399,7 +406,7 @@ footer {
     color:#FFFFFF;
 }
 
-.cta1, .cta2, .cta3, .cta4 {
+.cta1 {
     background-color: #B3724A;
     color: #fff;
     padding: 10px 20px;
@@ -415,6 +422,20 @@ footer {
 
 .cta3 {
     margin-top: 30px;
+}
+
+.cta-knap {
+    background-color: #B3724A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-shadow: 1px 1px 3px #000000;
 }
 
 /* Find en stand nær dig Section Styles */
@@ -514,6 +535,97 @@ footer {
 }
 
 
+
+
+.modelindhold {
+    background-color: #FAF8F5;
+    padding: 40px;
+    max-width: 90%; /* Responsive max width */
+    width: auto; /* Adjust width to be auto, let max-width control the size */
+    text-align: center;
+    border-radius: 10px;
+    border:none;
+    position: fixed; /* Fixed position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Above overlay background */
+}
+
+.modelindhold select {
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-color: #B3724A;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.model-cta-knap {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Styles for the input fields in the "Personlige oplysninger" modal */
+.info-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.modeloverlay {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Make sure this is less than the z-index of .modelindhold */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Overlay background */
+}
+
+.modelindhold {
+    background-color: #FAF8F5;
+    padding: 40px;
+    max-width: 90%; /* Responsive max width */
+    width: auto; /* Adjust width to be auto, let max-width control the size */
+    text-align: center;
+    border-radius: 10px;
+    border:none;
+    position: fixed; /* Fixed position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Above overlay background */
+}
+
+/* Rest of your CSS */
+
+
+
+.modeloverlay dialog.modelindhold {
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+.modeloverlay dialog.modelindhold {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 1001;  /* Higher z-index than the modal-overlay */
+    display: block;  /* Ensure it's displayed */
+}
+
+
+
 /* Responsive adjustments */
 @media (max-width: 1000) {
     .lokation-figure {
@@ -605,11 +717,23 @@ img {
     }
     .kontakt-section {
         width: 85%;
-    }   
+    }
+    .right-menu {
+        display:none;
+    }
+}
+
+@media (min-width: 768px) {
+.right-menu {
+    display:none;
+    }
 }
 
 @media (max-width: 768px) {
     .erdumed5 {
         width: 100%;
+    }
+    .desktop-menu {
+        display:none;
     }
 }
