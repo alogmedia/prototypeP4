@@ -554,21 +554,19 @@ footer {
 
 .modelindhold {
     background-color: #FAF8F5;
-    padding: 40px;
     max-width: 90%; /* Responsive max width */
     width: auto; /* Adjust width to be auto, let max-width control the size */
     text-align: center;
-    border-radius: 10px;
-    border:none;
     position: fixed; /* Fixed position */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001; /* Above overlay background */
+    border: #B3724A 3px solid;
 }
 
 .modelindhold select {
-    width: 50%;
+    width: 100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -594,8 +592,13 @@ footer {
 .info-form input {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
+    border: 1px solid #B3724A;
+    width: 100%;
+}
+
+.proces {
+    width: 75%;
+    height: 25px;
 }
 
 .modeloverlay {
@@ -609,18 +612,8 @@ footer {
     background: rgba(0, 0, 0, 0.6); /* Overlay background */
 }
 
-.modelindhold {
-    background-color: #FAF8F5;
-    padding: 40px;
-    max-width: 90%; /* Responsive max width */
-    width: auto; /* Adjust width to be auto, let max-width control the size */
-    text-align: center;
-    border-radius: 10px;
-    border:none;
-    position: fixed; /* Fixed position */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1001; /* Above overlay background */
+.mobilepay {
+    width: 50%;
 }
 
 /* Rest of your CSS */

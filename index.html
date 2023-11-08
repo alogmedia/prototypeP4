@@ -15,10 +15,10 @@
             <img class="logoimg" src="assets/images/logo.png" alt="Logo">
         </figure>
         <ul class="desktop-menu">
-                <li><a href="#">OM OS</a></li>
-                <li><a href="#">LEJ STAND</a></li>
-                <li><a href="#">LOKATIONER</a></li>
-                <li><a href="#">KONTAKT OS</a></li>
+                <li><a href="#omos-scroll">OM OS</a></li>
+                <li><a href="#findstand">FIND STAND</a></li>
+                <li><a href="lokationer.html">LOKATIONER</a></li>
+                <li><a href="#kontakt">KONTAKT OS</a></li>
         </ul>
         <nav class="footer-menu">
             <aside class="right-menu">
@@ -125,7 +125,7 @@
 <!-- Find en stand -->
 <section class="find-stand-sektion">
     <figure class="findstand-figure">
-        <h2>
+        <h2 id="findstand">
             Find en stand nær dig
         </h2>
                     <ul id="kort">
@@ -221,7 +221,7 @@
 
 <!-- Kontakt sektion -->
 <section class="kontakt-section">
-    <h2>
+    <h2 id="kontakt">
         KONTAKT
     </h2>
     <p>Loppemarkedernesdag</p>
@@ -238,6 +238,8 @@
 <dialog class="modeloverlay" id="byModel">
     <dialog class="modelindhold">
     <h3 class="overlayoverskrift">Vælg by</h3>
+    <img class="proces" src="assets/images/proces1.PNG">
+
     <p>steder i landet afholdes Loppemarkedernesdag</p>
     <p>lørdag d. 20 maj</p>
     <p>kl 09:00-17:00 </p>
@@ -255,6 +257,8 @@
     <dialog class="modeloverlay" id="infoModel">
     <dialog class="modelindhold">
     <h3 class="overlayoverskrift">Personlige oplysninger</h3>
+    <img class="proces" src="assets/images/proces2.PNG">
+
     <form class="info-form">
     <input placeholder="Navn" required="" type="text"/>
     <input placeholder="Efternavn" required="" type="text"/>
@@ -264,9 +268,40 @@
     <input placeholder="By" required="" type="text"/>
     <input placeholder="Postnummer" required="" type="text"/>
     </form>
-    <button class="cta-knap model-cta-knap">Submit</button>
+    <button class="cta-knap model-cta-knap" data-action="skift-til-betalingModel">Videre</button>
     </dialog>
     </dialog>
+
+    <!-- Third Modal Overlay for "Betalings oplysninger" -->
+    <dialog class="modeloverlay" id="betalingModel">
+        <dialog class="modelindhold">
+        <h3 class="overlayoverskrift">Betalings oplysninger</h3>
+        <img class="proces" src="assets/images/proces3.PNG">
+
+        <form class="info-form">
+        <input placeholder="Kortnummer" required="" type="text"/>
+        <input placeholder="Udløbsdato M/ÅR" required="" type="text"/>
+        <input placeholder="CVC" required="" type="email"/>
+        <input placeholder="Kortholders fulde navn" required="" type="tel"/>
+        </form>
+        <p>Betal med mobilepay:</p>
+        <img class="mobilepay" src="assets/images/mobilepay.png">
+        <button class="cta-knap model-cta-knap" data-action="skift-til-afslutModel">Betal</button>
+        </dialog>
+        </dialog>
+
+    <!-- Third Modal Overlay for "Betalings oplysninger" -->
+    <dialog class="modeloverlay" id="afslutModel">
+        <dialog class="modelindhold">
+        <h3 class="overlayoverskrift">Tillykke</h3>
+        <img class="proces" src="assets/images/proces4.PNG">
+        <p>Din bod er successfuldt bestilt</p>
+        <p>i Odense C D. 20 Maj</p>
+        <p>Du vil modtage en Email med</p>
+        <p>bekræftelsen</p>
+        <button class="cta-knap model-cta-knap" data-action="afslut">Afslut</button>
+        </dialog>
+        </dialog>
 
 <!-- Footer -->
 <footer>
