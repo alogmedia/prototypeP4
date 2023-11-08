@@ -549,7 +549,7 @@ footer {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     position: fixed; /* Fixed position */
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001; /* Above overlay background */
@@ -594,16 +594,31 @@ footer {
     background: rgba(0, 0, 0, 0.6); /* Overlay background */
 }
 
+.modelindhold {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 90%; /* Responsive max width */
+    width: auto; /* Adjust width to be auto, let max-width control the size */
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: fixed; /* Fixed position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Above overlay background */
+}
+
+/* Rest of your CSS */
+
+
 
 .modeloverlay dialog.modelindhold {
     position: fixed;
-    top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .modeloverlay dialog.modelindhold {
     position: fixed;
-    top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001;  /* Higher z-index than the modal-overlay */
     display: block;  /* Ensure it's displayed */
