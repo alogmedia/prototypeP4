@@ -82,7 +82,7 @@ header {
 
 #settings {
     position:absolute;
-    top:5%;
+    top:4%;
     right:5%;
     text-decoration: none;
     font-size: 25px;
@@ -644,6 +644,12 @@ img {
     }
     .right-menu {
         display:none;
+    }
+}
+
+@media (min-width: 768px) {
+.right-menu {
+    display:none;
     }
 }
 
