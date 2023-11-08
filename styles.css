@@ -329,6 +329,9 @@ body, .midterbillede-sektion {
     margin-bottom: 20px;
 }
 
+
+/*FAQ sektion*/
+
 .faq-heading{
     padding: 20px 60px;
     text-align: center;
@@ -340,7 +343,7 @@ justify-content: center;
 flex-direction: column;
 }
 
-/* Style the buttons that are used to open and close the faq-page body */
+/* Spørgsmål */
 .faq-page {
     color: #00985F;
     cursor: pointer;
@@ -350,28 +353,24 @@ flex-direction: column;
     margin: auto;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom: 5px; /* Add spacing between FAQ entries */
-}
-.faq-body{
-    margin: auto;
-    /* text-align: center; */
-   width: 60%; 
-   padding: auto;
-   font-size: 15px;  
-   margin-bottom: 5px; /* Add spacing between FAQ entries */
+    margin-bottom: 5px; 
 }
 
-/* Style the faq-page panel. Note: hidden by default */
+/* Svar */
 .faq-body {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
+   margin: auto;
+   width: 60%; 
+   font-size: 15px;  
+   margin-bottom: 5px; 
+   padding: 0 18px;
+   background-color: #FFFFFF;
+   display: none;
+   overflow: hidden;
 }
 
 .faq-page:after {
     content: '\02795';
-    /* Unicode character for "plus" sign (+) */
+    /* For "plus" sign (+) */
     font-size: 13px;
     color: #777;
     float: right;
@@ -380,25 +379,10 @@ flex-direction: column;
 
 .active:after {
     content: "\2796";
-    /* Unicode character for "minus" sign (-) */
+    /* For "minus" sign (-) */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 1000px) {
-    .faqul li {
-        height: 70px; /* Increased height for smaller screens */
-        font-size: 0.8em; /* Increase font size for better readability on smaller screens */
-        margin-right:auto;
-        margin-left: auto;
 
-    }
-    .faqul {
-        list-style-type: none; /* Remove bullets */
-        text-align:left;
-        width:100%;
-        padding:0;
-    }
-}
 
 /* KONTAKT Section Styles */
 .kontakt-section {
