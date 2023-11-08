@@ -274,14 +274,18 @@ body, .midterbillede-sektion {
     border-right: 0.4rem solid transparent;
     border-top: 0.65rem solid rgb(211, 211, 211);
     transition: border-top 0.25s ease-out;  
+    transition: transform 0.25s ease-out,
+    background-color 0.25s ease-out;
+
  }
  #kort li:hover{
    color: coral;
-   background-color: coral;
+   background-color: rgb(255, 255, 255) ;
    transform: translateX(-1rem)translateY(-2.5rem); 
  }
  #kort li:hover:after{
     border-top:0.65rem solid coral;
+    
  }
 
  h3{
