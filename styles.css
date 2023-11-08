@@ -549,7 +549,7 @@ footer {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     position: fixed; /* Fixed position */
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001; /* Above overlay background */
