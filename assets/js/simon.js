@@ -1,3 +1,5 @@
+console.log("Simon.js køre med klatten....");
+
 // en eventlistener som henter elementerne fra dom'en
 document.addEventListener('DOMContentLoaded', function () {
 //Skaber en variabel, som samler listeelementerne
@@ -14,9 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     let nåls = document.getElementsByClassName('nål');
-    let overlay = document.getElementById('overlayx');
-    let overlayText = document.getElementById('overlayx-text');
+    const overlay = document.getElementById('overlayx');
+    const overlayText = document.getElementById('overlayx-text');
 
+//En funktion som viser tekstboksen
     function showOverlay(event) {
         let nål = event.currentTarget; 
 // skaber en array ud fra listeelmenternes variabel
@@ -31,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.style.display = 'block';
     }
 
-//Skjuler tekstboksen
+//En funktion som kan skjule tekstboksen
     function hideOverlay() {
         overlay.style.display = 'none';
     }
-//viser teksboksen når musen er over og skjuler når musen fjernes
+//Skaber et loop som gentager funktionen for hvert nåleelement
     Array.from(nåls).forEach(function (nål) {
         nål.addEventListener('mouseenter', showOverlay);
         nål.addEventListener('mouseleave', hideOverlay); 
