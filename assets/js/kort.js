@@ -1,4 +1,9 @@
+// Sender et tekststykke til konsollen, for at sikre sig at JS kører korrekt
+
+
+// en eventlistener som henter enter listeelementerne fra dom'en
 document.addEventListener('DOMContentLoaded', function () {
+//Skaber en variabel, som samler listeelementerne
     let nålsInfo = {
         'nål-1': '<h3>Odense Havn</h3><p class=adressetxt>EDIONSVEJ 5000 ODENSE C</p><p class=tidtxt>20. maj 09:00-17:00</p>',
         'nål-2': '<h3>København Rådhusplads</h3><p class=adressetxt>1599 KØBENHAVN V</p><p class=tidtxt>20. maj 09:00-17:00</p>',
