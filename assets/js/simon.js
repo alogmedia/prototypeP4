@@ -1,3 +1,5 @@
+console.log("simon.js køre....");
+
 document.addEventListener('DOMContentLoaded', function () {
     let nålsInfo = {
         'nål-1': '<h3>Odense Havn</h3><p class=adressetxt>EDIONSVEJ 5000 ODENSE C</p><p class=tidtxt>20. maj 09:00-17:00</p>',
