@@ -1,3 +1,5 @@
+console.log("overlay(Albert).js kører...");
+
 // Hent model elementer og CTA knapperne
 const cityModelOverlay = document.getElementById('byModel');
 const infoModelOverlay = document.getElementById('infoModel');

@@ -415,35 +415,53 @@ body, .midterbillede-sektion {
 
 
    
+/* Her starter FAQ sektion */
 .faq-container{
-display: flex;
-justify-content: center;
-flex-direction: column;
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Overskrift */
+.faq-heading{
+    padding: 20px 60px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Spørgsmål */
 .faq-page {
-    color: #00985F;
     cursor: pointer;
+    /* Pil når musen holdes på elementerne */
     padding: 30px 20px;
-    width: 60%;
-    transition: 0.4s;
+    width: 80%;
     margin: auto;
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 5px; 
+    /* Afstand mellem boxe */
 }
 
 /* Svar */
 .faq-body {
    margin: auto;
-   width: 60%; 
+   width: 80%; 
    font-size: 15px;  
    margin-bottom: 5px; 
    padding: 0 18px;
    background-color: #FFFFFF;
    display: none;
+   /* Gøres usynlig så det ikke ses på + siden */
    overflow: hidden;
+   /* Sikre at indholdet ikke vises udenfor elemtets grænser */
 }
 
 .faq-page:after {
