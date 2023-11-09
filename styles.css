@@ -612,11 +612,20 @@ footer {
     background: rgba(0, 0, 0, 0.6); /* Overlay background */
 }
 
+/* New styles for the expiration date inputs to sit side by side */
+.expiration-fields {
+    display: flex;
+    gap: 10px; /* Adjust gap as needed */
+}
+
+/* Styles to make inputs take up full width inside the .expiration-fields container */
+.expiration-fields input {
+    flex: 1; /* Make inputs flex to fill the space */
+}
+
 .mobilepay {
     width: 50%;
 }
-
-/* Rest of your CSS */
 
 
 

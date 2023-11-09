@@ -280,15 +280,18 @@
 
         <form class="info-form">
         <input placeholder="Kortnummer" required="" type="text"/>
-        <input placeholder="Udløbsdato M/ÅR" required="" type="text"/>
+        <div class="expiration-fields">
+            <input class="udl" placeholder="Udløbsdato Måned" required="" type="text"/>
+            <input class="aar" placeholder="ÅR" required="" type="text"/>
+        </div>
         <input placeholder="CVC" required="" type="email"/>
         <input placeholder="Kortholders fulde navn" required="" type="tel"/>
         </form>
         <p>Betal med mobilepay:</p>
-        <img class="mobilepay" src="assets/images/mobilepay.png">
+        <img id="mobilepayImage" class="mobilepay" src="assets/images/mobilepay.png">
         <button class="cta-knap model-cta-knap" data-action="skift-til-afslutModel">Betal</button>
         </dialog>
-        </dialog>
+    </dialog>
 
     <!-- Third Modal Overlay for "Betalings oplysninger" -->
     <dialog class="modeloverlay" id="afslutModel">

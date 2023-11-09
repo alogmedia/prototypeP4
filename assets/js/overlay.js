@@ -27,6 +27,15 @@ ctaKnapper.forEach(btn => {
     });
 });
 
+// Get the image element by its ID
+const mobilepayImage = document.getElementById('mobilepayImage');
+
+// Bind a click event to the image
+mobilepayImage.addEventListener('click', function() {
+    // Perform the same action as the button with data-action="skift-til-afslutModel"
+    betalingModelOverlay.style.display = 'none'; // Hide the current modal
+    afslutModelOverlay.style.display = 'flex';   // Display the next modal
+});
 // Close the modals when clicking outside the modal content
 window.addEventListener('click', function(event) {
     if (event.target === cityModelOverlay || event.target === infoModelOverlay || event.target === betalingModelOverlay || event.target === afslutModelOverlay) {
