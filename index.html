@@ -12,13 +12,13 @@
 <body>
     <header>
         <figure class="logo">
-            <img class="logoimg" src="assets/images/logo.png" alt="Logo">
+            <a href="index.html"><img class="logoimg" src="assets/images/logo.png" alt="Logo"></a>
         </figure>
         <ul class="desktop-menu">
-                <li><a href="#">OM OS</a></li>
-                <li><a href="#">LEJ STAND</a></li>
-                <li><a href="#">LOKATIONER</a></li>
-                <li><a href="#">KONTAKT OS</a></li>
+                <li><a href="#omos-scroll">OM OS</a></li>
+                <li><a href="#findstand">FIND STAND</a></li>
+                <li><a href="lokationer.html">LOKATIONER</a></li>
+                <li><a href="#kontakt">KONTAKT OS</a></li>
         </ul>
         <nav class="footer-menu">
             <aside class="right-menu">
@@ -39,6 +39,7 @@
         <h1 class="banneroverskrift">
             Lørdag d. 20 maj
         </h1>
+        <p>kl. 9-17</p>
         <p class="bannertekst">
             Slå et slag for miljøet og vores smukke natur! 
             I samarbejde med Den Danske Naturfond kan du nu leje en stand til Loppemarkedernes Dag i nærheden af dig.
@@ -157,7 +158,6 @@
                 style="top: 63%; left: 38%;">
             </li>
         </ul>
-        <!-- tekst -->
         <div id="overlayx" style="display:none;">
             <p id="overlayx-text"></p>
         </div>
@@ -167,9 +167,9 @@
    </figure>
 </section>
 
-<!-- Faq sektion -->
-<h2 class="faq-heading">FAQ'S</h2>
+<!-- FAQ sektion -->
 <section class="faq-container">
+    <h2 class="faq-heading">FAQ</h2>
         <figure class="faq-page">Hvad er inkluderet i en stand?</figure>
         <figure class="faq-body">
             <p>En stand svarer til 4,5 kvm. Dette er opridset ude på pladsen. 
@@ -191,7 +191,7 @@
         </figure>
         <figure class="faq-page">Hvor kan jeg læse om de enkelte steder det afholdes?</figure>
         <figure class="faq-body">
-            <p>Der kan læses om de enkelte lokationer om loppemarkeder her.</p>
+            <p>Der kan læses om de enkelte lokationer om loppemarkeder <a href="lokationer.html">her</a>.</p>
         </figure>
         <figure class="faq-page">Jeg har ikke modtaget kvittering for mit stand-køb?</figure>
         <figure class="faq-body">
@@ -220,7 +220,7 @@
 
 <!-- Kontakt sektion -->
 <section class="kontakt-section">
-    <h2>
+    <h2 id="kontakt">
         KONTAKT
     </h2>
     <p>Loppemarkedernesdag</p>
@@ -229,6 +229,11 @@
     <p>kontakt@naturfonden.dk</p>
     <p>71 99 72 01</p>
     <p>CVR-nr. 36 50 29 91</p>
+    <figure class="socialikoner">
+        <img src="assets/images/Ikoner/instagram.png">
+        <img src="assets/images/Ikoner/tiktok.png">
+        <img src="assets/images/Ikoner/facebook.png">
+    </figure>
 </section>
 </main>
 
@@ -237,6 +242,8 @@
 <dialog class="modeloverlay" id="byModel">
     <dialog class="modelindhold">
     <h3 class="overlayoverskrift">Vælg by</h3>
+    <img class="proces" src="assets/images/proces1.PNG">
+
     <p>steder i landet afholdes Loppemarkedernesdag</p>
     <p>lørdag d. 20 maj</p>
     <p>kl 09:00-17:00 </p>
@@ -254,6 +261,8 @@
     <dialog class="modeloverlay" id="infoModel">
     <dialog class="modelindhold">
     <h3 class="overlayoverskrift">Personlige oplysninger</h3>
+    <img class="proces" src="assets/images/proces2.PNG">
+
     <form class="info-form">
     <input placeholder="Navn" required="" type="text"/>
     <input placeholder="Efternavn" required="" type="text"/>
@@ -263,9 +272,45 @@
     <input placeholder="By" required="" type="text"/>
     <input placeholder="Postnummer" required="" type="text"/>
     </form>
-    <button class="cta-knap model-cta-knap">Submit</button>
+    <button class="cta-knap model-cta-knap" data-action="skift-til-betalingModel">Videre</button>
     </dialog>
     </dialog>
+
+    <!-- Third Modal Overlay for "Betalings oplysninger" -->
+    <dialog class="modeloverlay" id="betalingModel">
+        <dialog class="modelindhold">
+        <h3 class="overlayoverskrift">Betalings oplysninger</h3>
+        <img class="proces" src="assets/images/proces3.PNG">
+
+        <form class="info-form">
+        <input placeholder="Kortnummer" required="" type="text"/>
+        <div class="expiration-fields">
+            <input class="udl" placeholder="Udløbsdato Måned" required="" type="text"/>
+            <input class="aar" placeholder="ÅR" required="" type="text"/>
+        </div>
+        <input placeholder="CVC" required="" type="email"/>
+        <input placeholder="Kortholders fulde navn" required="" type="tel"/>
+        </form>
+        <p>Betal med mobilepay:</p>
+        <img id="mobilepayImage" class="mobilepay" src="assets/images/mobilepay.png">
+        <button class="cta-knap model-cta-knap" data-action="skift-til-afslutModel">Betal</button>
+        </dialog>
+    </dialog>
+
+    <!-- Third Modal Overlay for "Betalings oplysninger" -->
+    <dialog class="modeloverlay" id="afslutModel">
+        <dialog class="modelindhold">
+        <h3 class="overlayoverskrift">FULDFØRT</h3>
+        <img class="proces" src="assets/images/proces4.PNG">
+        <img class="successimg" src="assets/images/Ikoner/success.svg">
+        <h3 class="overlayoverskrift">Tillykke</h3>
+        <p class="successtekst">Din bod er successfuldt bestilt</p>
+        <p class="successtekst">i Odense C D. 20 Maj</p>
+        <p class="successtekst">Du vil modtage en Email med</p>
+        <p class="successtekst">bekræftelsen</p>
+        <button class="cta-knap model-cta-knap" data-action="afslut">Afslut</button>
+        </dialog>
+        </dialog>
 
 <!-- Footer -->
 <footer>

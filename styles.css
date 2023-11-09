@@ -38,7 +38,7 @@ header {
     text-decoration: none;
     list-style-type: none;
     position: absolute;
-    top:5%;
+    top:4%;
     right: 5%;
 }
 
@@ -56,7 +56,7 @@ header {
     background-color: #B3724A; /* Tilføj denne linje */
     position: absolute; /* Tilføj denne linje */
     bottom: 0px; /* Tilføj denne linje */
-    left: 0; /* Tilføj denne linje */
+    left: 20px; /* Tilføj denne linje */
     right: 0; /* Tilføj denne linje */
 }
 
@@ -173,6 +173,7 @@ header {
 .banneroverskrift {
     color: #00985F;
     font-size: 1.5rem; /* Adjusted font size */
+    font-family: SundayBest;
 }
 
 .bannertekst {
@@ -413,37 +414,136 @@ body, .midterbillede-sektion {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*KORT sektion*/
+#kort{
+    width: 100%;
+    height: 0;
+    padding-bottom: 65%;
+    display: block;
+    position: relative;
+    background-image: url("assets/images/DKkort.png");
+    background-position:center;
+    background-size:cover; 
+    background-repeat: no-repeat;
+ }
+ 
+ /* ===== nåle på kortet ===== */
+ #kort li {
+    display: block;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transform: translateX(-1rem) translateY(-2.2rem); 
+    transition: transform 0.25s ease-out,
+    background-color 0.25s ease-out;
+    color: rgb(211, 211, 211);
+    border-style: solid;
+    border-width: 4px;
+    z-index: 1;
+ }
+ #kort li:after{ /* nåle spids */
+    content:'';
+    display: block;
+    width: 0; height: 0;
+    margin-top: 0.8rem;
+    margin-left: -0.04rem;
+    border-left: 0.4rem solid transparent;
+    border-right: 0.4rem solid transparent;
+    border-top: 0.65rem solid rgb(211, 211, 211);
+    transition: border-top 0.25s ease-out;  
+    transition: transform 0.25s ease-out,
+    background-color 0.25s ease-out;
+ }
+ 
+ #kort li:hover{
+   color: coral;
+   background-color: rgb(255, 255, 255) ;
+   transform: translateX(-1rem)translateY(-2.5rem); 
+ }
+ #kort li:hover:after{
+    border-top:0.65rem solid coral;
+    
+ }
+
+ h3{
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1rem;
+ }
+
+ .adressetxt{
+    font-size: 0.6rem;
+    color: #000000;
+ }
+
+ .tidtxt{
+    font-size: 0.6rem;
+    color: #000000;
+ }
+
+#overlayx {
+    position: absolute;
+    background-color: #F5F1E8; 
+    padding: 10px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
    
+/* Her starter FAQ sektion */
 .faq-container{
-display: flex;
-justify-content: center;
-flex-direction: column;
+    text-align: center;
+    background-color: #FAF8F5;
+    box-sizing: border-box;
+    padding: 20px 10%;
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Overskrift */
+.faq-heading{
+    padding: 20px 60px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Spørgsmål */
 .faq-page {
-    color: #00985F;
     cursor: pointer;
+    /* Pil når musen holdes på elementerne */
     padding: 30px 20px;
-    width: 60%;
-    transition: 0.4s;
+    width: 80%;
     margin: auto;
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 5px; 
+    /* Afstand mellem boxe */
 }
 
 /* Svar */
 .faq-body {
    margin: auto;
-   width: 60%; 
+   width: 80%; 
    font-size: 15px;  
    margin-bottom: 5px; 
    padding: 0 18px;
    background-color: #FFFFFF;
    display: none;
+   /* Gøres usynlig så det ikke ses på + siden */
    overflow: hidden;
+   /* Sikre at indholdet ikke vises udenfor elemtets grænser */
 }
 
 .faq-page:after {
@@ -474,6 +574,19 @@ flex-direction: column;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+/* New styles for the social icons to be centered */
+.socialikoner {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    cursor: pointer;
+  }
+  
+  .socialikoner img {
+    width: 10%;
+  }
+
 
 
 footer {
@@ -519,46 +632,13 @@ footer {
     text-shadow: 1px 1px 3px #000000;
 }
 
-/* Find en stand nær dig Section Styles */
-.lokation-figure {
-    text-align: center;
-    background-color: #FAF8F5;
-    box-sizing: border-box;
-    padding: 20px 10%;
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.lokationoverskrift {
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.lokationoverskrift,
-.afholdes {
-    display: block; /* Ensures that the elements take up the full width available and stack vertically */
-    text-align: center; /* Optional: if you want the text to be centered */
-    margin: 10px 0; /* Adjust the margin as needed for spacing */
-}
-
 /* If .lokation-figure is a flex container, ensure it stacks children vertically */
 .lokation-figure-top {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align the flex items if needed */
-    justify-content: center; /* Center the content vertically if needed */
-    /* Other styling as needed */
-    text-align: center;
     background-color: #FAF8F5;
-    box-sizing: border-box;
     padding: 20px 10%;
     width: 95%;
-    height: 100%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -566,75 +646,41 @@ footer {
     margin-bottom: 20px;
 }
 
-
+/* If .lokation-figure is a flex container, ensure it stacks children vertically */
 .lokation {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.lokation-figure {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: #FAF8F5;
+    padding: 20px 10%;
     width: 100%;
-}
-
-.lokation-image-left .lokationbillede,
-.lokation-image-right .lokationbillede {
-    width: 50%; /* Adjust image size */
-}
-
-.lokation-content-left {
-    flex: 1;
-    padding: 10px; /* Add padding around the text */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align:left;
 }
 
-.lokation-content-right {
-    flex: 1;
-    padding: 10px; /* Add padding around the text */
-    text-align:right;
+.lokationbillede {
+    width:100%;
 }
-
-.lokationtekst-left {
-    color:#333333;
-    margin-left:auto;
-}
-
-.lokationtekst-right {
-    color:#333333;
-    margin-right:auto;
-}
-
-.lokationheadline {
-    margin-top: 0px;
-}
-
-/* This will make the text come first when image is on the right */
-.lokation-image-right {
-    flex-direction: row-reverse;
-}
-
-
-
 
 .modelindhold {
     background-color: #FAF8F5;
-    padding: 40px;
     max-width: 90%; /* Responsive max width */
     width: auto; /* Adjust width to be auto, let max-width control the size */
     text-align: center;
-    border-radius: 10px;
-    border:none;
     position: fixed; /* Fixed position */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001; /* Above overlay background */
+    border: #B3724A 3px solid;
+    color:#00985F;
 }
 
 .modelindhold select {
-    width: 50%;
+    width: 100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -642,6 +688,10 @@ footer {
     border-color: #B3724A;
     margin-left:auto;
     margin-right:auto;
+}
+
+.overlayoverskrift {
+    color:#00985F;
 }
 
 .model-cta-knap {
@@ -660,8 +710,13 @@ footer {
 .info-form input {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
+    border: 1px solid #B3724A;
+    width: 100%;
+}
+
+.proces {
+    width: 75%;
+    height: 25px;
 }
 
 .modeloverlay {
@@ -675,22 +730,28 @@ footer {
     background: rgba(0, 0, 0, 0.6); /* Overlay background */
 }
 
-.modelindhold {
-    background-color: #FAF8F5;
-    padding: 40px;
-    max-width: 90%; /* Responsive max width */
-    width: auto; /* Adjust width to be auto, let max-width control the size */
-    text-align: center;
-    border-radius: 10px;
-    border:none;
-    position: fixed; /* Fixed position */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1001; /* Above overlay background */
+/* New styles for the expiration date inputs to sit side by side */
+.expiration-fields {
+    display: flex;
+    gap: 10px; /* Adjust gap as needed */
 }
 
-/* Rest of your CSS */
+/* Styles to make inputs take up full width inside the .expiration-fields container */
+.expiration-fields input {
+    flex: 1; /* Make inputs flex to fill the space */
+}
 
+.mobilepay {
+    width: 50%;
+}
+
+.successtekst {
+    font-size: 14px;
+}
+
+.successimg {
+    width:50%;
+}
 
 
 .modeloverlay dialog.modelindhold {
@@ -703,47 +764,6 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 1001;  /* Higher z-index than the modal-overlay */
     display: block;  /* Ensure it's displayed */
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 1000) {
-    .lokation-figure {
-        flex-direction: column;
-    }
-
-    .lokation-image-right .lokation-content,
-    .lokation-image-left .lokation-content {
-        order: -1; /* Make text appear above the image on smaller screens */
-    }
-
-    .lokationbillede {
-        width: 100%; /* Full width on smaller screens */
-    }
-
-    .lokationoverskrift {
-        text-align: center; /* Center the text on smaller screens */
-    }
-    .lokation-image-left .lokationbillede, .lokation-image-right .lokationbillede {
-        width:100%;
-    }
-    .lokationtekst-left {
-        color:#333333;
-        margin-left:auto;
-        width:100%;
-        text-align: left;;
-    }
-    
-    .lokationtekst-right {
-        color:#333333;
-        margin-right:auto;
-        width:100%;
-        text-align: left;
-    }
-    .lokationheadline {
-        text-align:left;
-    }
 }
 
 
