@@ -173,6 +173,7 @@ header {
 .banneroverskrift {
     color: #00985F;
     font-size: 1.5rem; /* Adjusted font size */
+    font-family: SundayBest;
 }
 
 .bannertekst {
@@ -574,6 +575,19 @@ body, .midterbillede-sektion {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* New styles for the social icons to be centered */
+.socialikoner {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    cursor: pointer;
+  }
+  
+  .socialikoner img {
+    width: 10%;
+  }
+
+
 
 footer {
     padding: 40px;
@@ -662,6 +676,7 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 1001; /* Above overlay background */
     border: #B3724A 3px solid;
+    color:#00985F;
 }
 
 .modelindhold select {
@@ -673,6 +688,10 @@ footer {
     border-color: #B3724A;
     margin-left:auto;
     margin-right:auto;
+}
+
+.overlayoverskrift {
+    color:#00985F;
 }
 
 .model-cta-knap {
@@ -726,6 +745,13 @@ footer {
     width: 50%;
 }
 
+.successtekst {
+    font-size: 14px;
+}
+
+.successimg {
+    width:50%;
+}
 
 
 .modeloverlay dialog.modelindhold {

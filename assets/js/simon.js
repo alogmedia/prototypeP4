@@ -1,4 +1,4 @@
-console.log("simon.js køre....");
+console.log("simon.js køre med klatten....");
 
 document.addEventListener('DOMContentLoaded', function () {
     let nålsInfo = {
