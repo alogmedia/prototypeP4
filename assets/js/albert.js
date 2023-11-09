@@ -1,6 +1,6 @@
 console.log("albert.js kører...");
 
-// Hent model elementer og CTA knapperne
+// Hent model elementer fra DOM og CTA knapperne
 const cityModelOverlay = document.getElementById('byModel');
 const infoModelOverlay = document.getElementById('infoModel');
 const betalingModelOverlay = document.getElementById('betalingModel');
@@ -12,7 +12,8 @@ const ctaKnapper = document.querySelectorAll('.cta-knap');
 ctaKnapper.forEach(btn => {
     btn.addEventListener('click', function(event) {
         event.stopPropagation(); // Stop propagation to ensure the window click event doesn't interfere
-        if (btn.getAttribute("data-action") === "skift-til-infoModel") {
+        // Tre ligmeds tegn siger at det skal være præcis samme string som der står i HTML'en
+        if (btn.getAttribute("data-action") === "skift-til-infoModel")  {
             cityModelOverlay.style.display = 'none'; // Display none(Gem den væk)
             infoModelOverlay.style.display = 'flex'; // Vis det næste overlay
         } else if (btn.getAttribute("data-action") === "skift-til-betalingModel") {
