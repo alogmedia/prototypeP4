@@ -27,7 +27,7 @@ settingsDropdown.addEventListener("click", function(event) {
 });
 
 // array via const - variable
-const numbers = ["OM OS", "LEJ STAND", "LOKATIONER", "KONTAKT",];
+const numbers = ['<a href="index.html#omos-scroll">OM OS</a>', '<a href="index.html#findstand">LEJ STAND</a>', '<a href="lokationer.html">LOKATIONER</a>', '<a href="index.html#kontakt">KONTAKT</a>',];
 
 // anden variable - kan ændres
 let txt = "";

@@ -3,7 +3,22 @@
     src: url(assets/font/SundayBest.ttf);
   }
 
-html {
+@font-face {
+font-family: RalewaySemibold;
+src: url(assets/font/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+font-family: RalewayBold;
+src: url(assets/font/Raleway-Bold.ttf);
+}
+
+@font-face {
+font-family: RalewayRegular;
+src: url(assets/font/Raleway-Regular.ttf);
+}
+
+  html {
     scroll-behavior: smooth;
 }
 
@@ -22,6 +37,22 @@ body {
     padding: 0;
     color:#00985F;
     background-color: #F5F1E8;
+}
+
+h2 {
+    font-family:RalewayBold;
+}
+
+h3 {
+    font-family: RalewaySemibold;
+}
+
+p {
+    font-family: RalewayRegular;
+}
+
+a {
+    font-family: RalewayRegular;
 }
 
 
@@ -60,6 +91,25 @@ header {
     right: 0; /* Tilføj denne linje */
 }
 
+#minliste li {
+    padding: 5px;
+    cursor: pointer;
+    font-size:18px;
+    color: #B3724A;
+    transition: color 0.3s;
+    list-style-type: none;
+}
+
+
+#minliste a {
+    color:#B3724A;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#minliste a:hover {
+    color: #00985F;
+}
 
 .desktop-menu a {
     text-decoration: none;
@@ -99,6 +149,7 @@ header {
 }
 
 /* Stil for dropdown menu */
+
 
 .dropdown ul {
     list-style: none;
@@ -170,11 +221,19 @@ header {
     max-height: 500px;
 }
 
-.banneroverskrift {
+.banneroverskrift1 {
+    color: #00985F;
+    font-size: 2.5rem; /* Adjusted font size */
+    font-family: SundayBest;
+    line-height: 0.2;
+}
+
+.banneroverskrift2 {
     color: #00985F;
     font-size: 1.5rem; /* Adjusted font size */
     font-family: SundayBest;
 }
+
 
 .bannertekst {
     color: #00985F;
@@ -254,6 +313,20 @@ body, .midterbillede-sektion {
         "erd1 erd2"
         "erd3 erd4"
         "erd5 erd5"; /* Default grid areas (mobile) */
+}
+
+.erdumedoverskrift {
+    color:#4F4F4F;
+    font-weight: bold;
+}
+
+.winwinoverskrift {
+    color: #00985F;
+    font-size: 24px;
+}
+
+.graatekster {
+    color:#6D6D6D;
 }
 
 .erdumed1 {
@@ -529,6 +602,7 @@ body, .midterbillede-sektion {
     background-color: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 5px; 
+    color:#4F4F4F;
     /* Afstand mellem boxe */
 }
 
@@ -544,6 +618,10 @@ body, .midterbillede-sektion {
    /* Gøres usynlig så det ikke ses på + siden */
    overflow: hidden;
    /* Sikre at indholdet ikke vises udenfor elemtets grænser */
+}
+
+.faq-body p {
+    color:#4F4F4F;
 }
 
 .faq-page:after {
@@ -584,7 +662,7 @@ body, .midterbillede-sektion {
   }
   
   .socialikoner img {
-    width: 10%;
+    width: 15%;
   }
 
 
@@ -652,7 +730,7 @@ footer {
     flex-direction: column;
     background-color: #FAF8F5;
     padding: 20px 10%;
-    width: 100%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -663,6 +741,27 @@ footer {
 
 .lokationbillede {
     width:100%;
+}
+
+.lokationikoner {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.checkboximg {
+    display: flex;
+    max-width: 100px;
+}
+
+.lokationheadline {
+    color:#00985F;
+    font-family: RalewaySemibold;
+}
+
+.lokationtekst {
+    color:#4F4F4F;
 }
 
 .modelindhold {
@@ -822,6 +921,9 @@ img {
     .right-menu {
         display:none;
     }
+    .socialikoner img {
+        width: 5%;
+      }
 }
 
 @media (min-width: 768px) {
@@ -841,4 +943,36 @@ img {
     .faq-container{
         width: 95%;
     }
+    .checkboximg {
+        display: flex;
+        max-width: 100px;
+        flex-wrap: nowrap;
+    }
+    .banneroverskrift1 {
+        color: #00985F;
+        font-size: 1.4rem; /* Adjusted font size */
+        font-family: SundayBest;
+    }
+    
+    .banneroverskrift2 {
+        color: #00985F;
+        font-size: 1rem; /* Adjusted font size */
+        font-family: SundayBest;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .banneroverskrift1 {
+        color: #00985F;
+        font-size: 0.8rem; /* Adjusted font size */
+        font-family: SundayBest;
+    }
+    
+    .banneroverskrift2 {
+        color: #00985F;
+        font-size: 0.6rem; /* Adjusted font size */
+        font-family: SundayBest;
+    }
+    
 }
