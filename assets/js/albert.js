@@ -11,7 +11,7 @@ const ctaKnapper = document.querySelectorAll('.cta-knap');
 // Åben vælg by overlay når en "Lej Stand" CTA knap bliver klikket på
 ctaKnapper.forEach(btn => {
     btn.addEventListener('click', function(event) {
-        event.stopPropagation(); // Stop propagation to ensure the window click event doesn't interfere
+        event.stopPropagation(); //
         // Tre ligmeds tegn siger at det skal være præcis samme string som der står i HTML'en
         if (btn.getAttribute("data-action") === "skift-til-infoModel")  {
             cityModelOverlay.style.display = 'none'; // Display none(Gem den væk)
